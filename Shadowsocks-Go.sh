@@ -642,23 +642,25 @@ action=$1
 if [[ "${action}" == "monitor" ]]; then
 	crontab_monitor
 else
-	echo && echo -e "  Shadowsocks-Go 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
-  
+	echo && echo -e "  
+======================================
+Shadowsocks-Go 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
+======================================
  ${Green_font_prefix} 0.${Font_color_suffix} 升级脚本
-————————————
+——————————————————————————————————————
  ${Green_font_prefix} 1.${Font_color_suffix} 安装 Shadowsocks
  ${Green_font_prefix} 2.${Font_color_suffix} 更新 Shadowsocks
  ${Green_font_prefix} 3.${Font_color_suffix} 卸载 Shadowsocks
-————————————
+——————————————————————————————————————
  ${Green_font_prefix} 4.${Font_color_suffix} 启动 Shadowsocks
  ${Green_font_prefix} 5.${Font_color_suffix} 停止 Shadowsocks
  ${Green_font_prefix} 6.${Font_color_suffix} 重启 Shadowsocks
-————————————
+——————————————————————————————————————
  ${Green_font_prefix} 7.${Font_color_suffix} 设置 账号配置
  ${Green_font_prefix} 8.${Font_color_suffix} 查看 账号信息
  ${Green_font_prefix} 9.${Font_color_suffix} 查看 日志信息
  ${Green_font_prefix}10.${Font_color_suffix} 查看 链接信息
-————————————" && echo
+======================================" && echo
 	if [[ -e ${FILE} ]]; then
 		check_pid
 		if [[ ! -z "${PID}" ]]; then
