@@ -19,6 +19,7 @@ CONF="/etc/shadowsocks-go/shadowsocks.conf"
 LOG="/usr/local/shadowsocks-go/shadowsocks-go.log"
 Now_ver_File="/etc/shadowsocks-go/ver.txt"
 Crontab_file="/usr/bin/crontab"
+mkdir /etc/shadowsocks-go
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
@@ -82,10 +83,10 @@ check_ver_comparison(){
 		if [[ $yn == [Yy] ]]; then
 			check_pid
 			[[ ! -z $PID ]] && kill -9 ${PID}
-			\cp "${CONF}" "/tmp/shadowsocks-go.conf"
+			\cp "${CONF}" "/tmp/shadowsocks.conf"
 			rm -rf ${FOLDER}
 			Download
-			mv "/tmp/shadowsocks-go.conf" "${CONF}"
+			mv "/tmp/shadowsocks.conf" "${CONF}"
 			Start
 		fi
 	else
