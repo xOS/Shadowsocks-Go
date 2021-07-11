@@ -15,7 +15,7 @@
 NAME="Shadowsocks"
 NAME_BIN="./shadowsocks-go "
 FOLDER="/usr/local/shadowsocks-go"
-CONF="/etc/shadowsocks-go/shadowsocks.conf
+CONF="/etc/shadowsocks-go/shadowsocks.conf"
 LOG="/usr/local/shadowsocks-go/shadowsocks-go.log"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
