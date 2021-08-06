@@ -344,7 +344,7 @@ Install(){
 Start(){
 	check_installed_status
 	check_pid
-	[[ ! -z ${PID} ]] && echo -e "${Error} Shadowsocks 正在运行，请检查 !" && exit 1
+	[[ ! -z ${PID} ]] && echo -e "${Info} Shadowsocks 已在运行!" && exit 1
 	/etc/init.d/Shadowsocks-Go start
 	#sleep 1s
 	check_pid
